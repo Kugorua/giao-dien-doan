@@ -1,0 +1,35 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.control .control__light-water {
+  display: flex;
+  justify-content: space-around;
+}
+.control .control__light-water .light-water {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  box-shadow: 0 5px 10px black;
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(224, 224, 224), rgb(165, 165, 165));
+}
+.control .control__light-water .light-water h2 {
+  text-align: center;
+}
+.control .control__light-water .control__light .light {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.control .control__light-water .control__light .light img {
+  width: 100px;
+  height: 100px;
+}
+
+.control .control__light-water .control__light .light span {
+}
