@@ -6,10 +6,23 @@
 }
 .app .chart {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   width: 75%;
   height: 45vh;
   padding: 20px 0;
+}
+.app .chart .chart-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+.app .chart .chart-tabel {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid white;
+  padding: 5px 10px;
 }
 .app .taskbar {
   width: 25%;

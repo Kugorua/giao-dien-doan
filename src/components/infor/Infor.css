@@ -1,0 +1,8 @@
+.infor .infor__type-tree {
+  display: flex;
+  align-items: center;
+}
+
+.type-tree img {
+  width: 80%;
+}

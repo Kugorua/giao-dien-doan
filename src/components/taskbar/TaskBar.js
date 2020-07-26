@@ -27,7 +27,7 @@ export default function TaskBar(props) {
           </li>
           <li onClick={() => options("control")}>
             <img src={tbControl} alt={"img"} />
-            <span>Control</span>
+            <span>Information</span>
           </li>
           <li>
             <img src={tbSetting} alt={"img"} />

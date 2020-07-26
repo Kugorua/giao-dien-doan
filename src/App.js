@@ -3,7 +3,8 @@ import "./App.css";
 import ChartHumidity from "./components/chart-humidity/ChartHumidity";
 import ChartTemperature from "./components/char-temperature/ChartTemperature";
 import TaskBar from "./components/taskbar/TaskBar";
-import Control from "./components/control/Control";
+import Infor from "./components/infor/Infor";
+import ControlChart from "./components/control-chart/ControlChart";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -23,12 +24,17 @@ class App extends Component {
         <div className="chart">
           {this.state.isOption === "dashboard" ? (
             <React.Fragment>
-              <ChartHumidity />
-              <ChartTemperature />
+              <div className="chart-tabel">
+                <ChartHumidity />
+                <ChartTemperature />
+              </div>
+              <div className="chart-control">
+                <ControlChart />
+              </div>
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <Control />
+              <Infor />
             </React.Fragment>
           )}
         </div>

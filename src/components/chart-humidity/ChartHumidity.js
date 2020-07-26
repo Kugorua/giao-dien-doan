@@ -109,7 +109,7 @@ export default class ChartHumidity extends Component {
             series={this.state.series}
             type="line"
             height={280}
-            width={500}
+            width={610}
           />
         </div>
       </div>
