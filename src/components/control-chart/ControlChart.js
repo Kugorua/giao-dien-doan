@@ -8,7 +8,7 @@ import ctcPhuntam from "../../images/ctc-phun-tam.png";
 import ctcPhunvanh from "../../images/ctc-phun-vanh.png";
 const instance = axios.create();
 export default function ControlChart() {
-  const [data, setData] = useState({ quat: true, maybom: true, pun: true });
+  const [data, setData] = useState({ quat: false, maybom: false, pun: false });
   const [infor, setInfor] = useState({});
   const sendData = (e) => {
     console.log(e.target.checked);

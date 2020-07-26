@@ -1,11 +1,11 @@
 .control {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
 }
 .control-chart {
   border-right: 1px solid white;
-  width: 40%;
+  width: 80%;
   height: 38vh;
   display: flex;
   flex-direction: column;

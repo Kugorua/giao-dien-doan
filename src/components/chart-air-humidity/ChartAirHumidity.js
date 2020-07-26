@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import ReactApexChart from "react-apexcharts";
 import axios from "axios";
-import "./ChartHumidity.css";
-export default class ChartHumidity extends Component {
+export default class ChartAirHumidity extends Component {
   constructor(props) {
     super(props);
 
@@ -17,49 +16,68 @@ export default class ChartHumidity extends Component {
         chart: {
           height: 350,
           type: "line",
+          zoom: {
+            enabled: false,
+          },
+        },
+        dataLabels: {
+          enabled: false,
         },
         stroke: {
-          width: 7,
-          curve: "smooth",
+          width: [5, 7, 5],
+          curve: "straight",
+          dashArray: [0, 8, 5],
+        },
+        title: {
+          text: "Page Statistics",
+          align: "left",
+        },
+        legend: {
+          tooltipHoverFormatter: function (val, opts) {
+            return (
+              val +
+              " - " +
+              opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
+              ""
+            );
+          },
+        },
+        markers: {
+          size: 0,
+          hover: {
+            sizeOffset: 6,
+          },
         },
         xaxis: {
           categories: [],
         },
-        title: {
-          text: "BIỂU ĐỒ ĐỘ ẨM",
-          align: "left",
-          style: {
-            fontSize: "16px",
-            color: "#666",
-          },
+        tooltip: {
+          y: [
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " (mins)";
+                },
+              },
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " per session";
+                },
+              },
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val;
+                },
+              },
+            },
+          ],
         },
-        fill: {
-          type: "gradient",
-          gradient: {
-            shade: "dark",
-            gradientToColors: ["#FDD835"],
-            shadeIntensity: 1,
-            type: "horizontal",
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 100, 100, 100],
-          },
-        },
-        markers: {
-          size: 4,
-          colors: ["#FFA41B"],
-          strokeColors: "#fff",
-          strokeWidth: 2,
-          hover: {
-            size: 7,
-          },
-        },
-        yaxis: {
-          min: 0,
-          max: 100,
-          title: {
-            text: "Engagement",
-          },
+        grid: {
+          borderColor: "#f1f1f1",
         },
       },
     };
@@ -102,16 +120,14 @@ export default class ChartHumidity extends Component {
   }
   render() {
     return (
-      <div className="chart-humidity">
-        <div id="chart">
-          <ReactApexChart
-            options={this.state.options}
-            series={this.state.series}
-            type="line"
-            height={280}
-            width={610}
-          />
-        </div>
+      <div id="chart">
+        <ReactApexChart
+          options={this.state.options}
+          series={this.state.series}
+          type="line"
+          height={240}
+          width={510}
+        />
       </div>
     );
   }

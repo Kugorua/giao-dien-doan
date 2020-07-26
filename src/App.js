@@ -5,6 +5,7 @@ import ChartTemperature from "./components/char-temperature/ChartTemperature";
 import TaskBar from "./components/taskbar/TaskBar";
 import Infor from "./components/infor/Infor";
 import ControlChart from "./components/control-chart/ControlChart";
+import ChartAirHumidity from "./components/chart-air-humidity/ChartAirHumidity";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -30,6 +31,7 @@ class App extends Component {
               </div>
               <div className="chart-control">
                 <ControlChart />
+                <ChartAirHumidity />
               </div>
             </React.Fragment>
           ) : (

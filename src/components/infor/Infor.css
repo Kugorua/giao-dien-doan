@@ -1,8 +1,14 @@
 .infor .infor__type-tree {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
-
-.type-tree img {
-  width: 80%;
+.infor .infor__type-tree .type-tree {
+  background-color: white;
+  border-radius: 10px;
+  width: 30%;
+}
+.infor .infor__type-tree .type-tree img {
+  width: 100%;
+  height: 200px;
 }
